@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './nestedList.module.scss';
 
 export default function NestedList({ dirData }) {
+  console.log('dirdata in nested list ', dirData)
   return (
     <div>
       <TreeRecursive data={[dirData]} />
@@ -38,7 +39,11 @@ function Folder({ folder, children }) {
 }
 
 const TreeRecursive = ({ data }) => {
+  console.log('data in tree recursive ', data)
   return data.map((item) => {
+    if (!item){
+      return null;
+    }
     if (item.type === 'file') {
       return <File file={item} key={`item-/docs/${item.id}`} />;
     }
