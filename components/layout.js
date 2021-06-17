@@ -1,9 +1,6 @@
 import Head from 'next/head';
 import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-
-const name = 'xypnox';
 export const siteTitle = 'Next.js Nested Website';
 
 export default function Layout({ children, home }) {
@@ -32,20 +29,6 @@ export default function Layout({ children, home }) {
         </div>
       )}
       <main>{children}</main>
-
-      <header className={styles.header}>
-        <>
-          <Link href='/'>
-            <a>
-              <img
-                src='/images/profile.png'
-                className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                alt={name}
-              />
-            </a>
-          </Link>
-        </>
-      </header>
     </div>
   );
 }
