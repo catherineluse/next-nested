@@ -17,6 +17,9 @@
 .topnav {
   padding-left: 15px;
   background-color: rgb(236, 240, 248);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /* The navigation menu links */
