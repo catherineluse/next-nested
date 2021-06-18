@@ -16,7 +16,7 @@ function File({ file }) {
       <Link href={`/docs/${file.id}`}>
         <a className={styles.label}>
           {file.matter.title}{' '}
-          <div className={styles.slugpath}>{`/docs/${file.id}`}</div>
+          {/* <div className={styles.slugpath}>{`/docs/${file.id}`}</div> */}
         </a>
       </Link>
     </div>
@@ -29,7 +29,7 @@ function Folder({ folder, children }) {
       <Link href={`/docs/${folder.id}`}>
         <a className={styles.folderLabel}>
           {folder.matter.title}{' '}
-          <div className={styles.slugpath}>{`/docs/${folder.id}`}</div>
+          {/* <div className={styles.slugpath}>{`/docs/${folder.id}`}</div> */}
         </a>
       </Link>
       <div className={styles.folderContents}>{children}</div>
