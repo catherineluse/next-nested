@@ -21,7 +21,8 @@ export default function Docs({ postData, allDocsNestedData }) {
       <div className="sidenav">
         <NestedList dirData={allDocsNestedData}></NestedList>
       </div>
-      <div className="main container">
+      <div className="main">
+        <div className="container">
         <Layout>
           {/* Add this <Head> tag */}
           <Head>
@@ -37,6 +38,7 @@ export default function Docs({ postData, allDocsNestedData }) {
             <MarkdownText text={postData.text}/>
           </article>
         </Layout>
+        </div>
       </div>
     </>
   );
