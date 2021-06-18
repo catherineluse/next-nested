@@ -7,12 +7,14 @@ import { getFolderNestedData } from "../../lib/docs";
 import Link from "next/link";
 import Date from "../../components/date";
 import NestedList from "../../components/nestedList";
+import MarkdownText from '../../components/markdownText';
 
 // File path for docs root
 const DOCS_ROOT = path.join(process.cwd(), "/docs");
 
 export default function Docs({ postData, allDocsNestedData }) {
   // const content = hydrate(source, { components });
+  console.log('post data is ', postData)
 
   return (
     <>
@@ -32,7 +34,7 @@ export default function Docs({ postData, allDocsNestedData }) {
                 <Date dateString={postData.date} />
               </div>
             )}
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            <MarkdownText text={postData.text}/>
           </article>
         </Layout>
       </div>
